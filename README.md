@@ -12,11 +12,13 @@ Ce projet contient :
 2. Notre notebook python
 3. Les fichiers composant notre API
 
-## Install
+## Install et utilisation du modèle
 
 Notre notebook nécessite l'installation de plusieurs modules :
 1. pandas, pour gérer notre dataset
 2. matplotlib, afin de créer des graphes
+
+ATTENTION : le modèle final choisi est trop lourd pour être placé dans le github (même en le zipant), je vous invite à relancer tout le notebook afin d'en télécharger le modèle au format pickle.
 
 ## API
 
