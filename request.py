@@ -33,4 +33,4 @@ headers = {'content-type': 'application/json', 'Accept-Charset': 'UTF-8'}
 
 response = requests.post(url, data=jsondata, headers=headers)
 
-print(response.json()['result'])
+print(f"Le temps de transcodage de votre video devrait etre de : {response.json()['result']} secondes.")
