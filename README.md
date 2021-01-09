@@ -17,6 +17,7 @@ Ce projet contient :
 Notre notebook nécessite l'installation de plusieurs modules :
 1. pandas, pour gérer notre dataset
 2. matplotlib, afin de créer des graphes
+3. sklearn, afin de créer les modèles de machine learning
 
 ATTENTION : le modèle final choisi est trop lourd pour être placé dans le github (même en le zipant), je vous invite à relancer tout le notebook afin d'en télécharger le modèle au format pickle.
 
@@ -30,3 +31,7 @@ Pour le test d'une requête, on va tester pour une vidéo de 2 minutes en 720p d
 
 ## Conclusion
 
+Suite à de nombreux essais avec différents modèles, nous en avons conclu que le meilleur modèle est le modèle de "regression bagging". En effet, il en ressort un coefficient de détermination proche de 100% (98%), ce qui peut être pris comme de l'overfitting et qui peut nuire au modèle. Cependant, le but de ce modèle étant de prédire le temps de transcodage de vidéos youtube, ce temps ne varie pas tellement est est souvent quasiment le même. C'est pour cela que les modeles testés lors de ce projet sont d'une précision très grande. De plus, les différents paramètres pouvant influencer ce temps de transcodage ont toujours le même impact et ce résultat est donc assez prévisible.
+Un autre modèle intéressant est celui du "Random Forrest" car il atteint également une précision très élevée (97%).
+
+On a pu implémenter ce modèle sur une API que nous pu également tester. Suite à de nombreux tests, nous avons remarqué que les résultats correspondaient bien aux différents paramètres évalués. Par exemple, une vidéo plus longue va mettre plus de temps a être transcodée, ou encore une résolution accrue va également augmenter ce temps de transcodage.
