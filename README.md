@@ -21,7 +21,10 @@ Notre notebook nécessite l'installation de plusieurs modules :
 ## API
 
 L'api est directement relié avec notre modèle et vous permet d'envoyer une requête contenant les paramètres d'une vidéo. Elle renvoie ensuite l'estimation du temps de transcodage de cette vidéo.
-Voici un exemple de requête : ""
+Le format d'une requête envoyée à l'api est la suivante :
+"duration","codec","width","height","bitrate","framerate","i","p","b","frames","i_size","p_size","b_size","size","o_codec","o_bitrate","o_framerate","o_width","o_height","umem"
+
+Pour le test d'une requête, on va tester pour une vidéo de 2 minutes en 720p du format flv au format mpeg4 en 4k avec une allocation mémoire de 60MB. Afin de tester cette requête, il faut lancer le fichier app.py avec python pour que le serveur se lance. Puis, on exécute le fichier "request.py" afin d'en récupérer le résultat de cette requête.
 
 ## Conclusion
 
